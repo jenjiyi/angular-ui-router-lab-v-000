@@ -38,13 +38,16 @@
         td {
             padding: 16px 12px 14px;
         }
+        a.active {
+          color: red;
+        }
     </style>
 </head>
 <body>
 
 <div ng-app="app" class="app">
-    <a href="#/user/liam">Liam</a> - <a href="#/user/jayden">Jayden</a> - <a href="#/user/mary">Mary</a>
-
+    <!-- <a href="#/user/liam">Liam</a> - <a href="#/user/jayden">Jayden</a> - <a href="#/user/mary">Mary</a> -->
+    <a ui-sref="user({ id: 'liam' })" href="#"  ui-sref-active="active">Liam</a> - <a ui-sref="user({ id: 'jayden' })" href="#" ui-sref-active="active">Jayden</a> - <a ui-sref="user({ id: 'mary' })" href="#" ui-sref-active="active">Mary</a>
     <div ui-view></div>
 </div>
 
